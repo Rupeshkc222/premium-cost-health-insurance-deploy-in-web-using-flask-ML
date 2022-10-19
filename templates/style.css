@@ -1,0 +1,22 @@
+h1{
+    font-size: 70px;
+    color: rgb(107, 17, 17);
+    background-color: beige;
+}
+.column{
+    float: left;
+    width: 50%;
+}
+.row:after{
+    display: table;
+    clear: both;
+}
+img{
+    width: 800px;
+    height: 600px;
+}
+form{
+    float: right;
+    padding-right: 150px;
+
+}

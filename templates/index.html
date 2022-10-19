@@ -8,33 +8,66 @@
 <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
 <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-  
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
- <div class="login">
-	<h1>Premium cost Prediction models</h1>
-
+  
+	<center><h1>Medical Premium Cost Prediction</h1></center>
+  <div class="row">
+      <div class="column">
+        <img src="https://navi.com/blog/wp-content/uploads/2021/12/best-health-insurance-plans.jpg">
+      </div>
+      <div class="column">
      <!-- Main Input For Receiving Query to our ML -->
-    <form action="/predict"method="POST">
-    	<input type="text" name="age" placeholder="enter ur age" required="required" />
-      <input type="text" name="sex" placeholder="enter ur sex" required="required" />
-      <input type="text" name="bmi" placeholder="enter ur bmi" required="required" />
-		  <input type="text" name="children" placeholder="enter ur children" required="required" />
-		  <input type="text" name="smoker" placeholder="smoking or not" required="required" />
-      <input type="text" name="region" placeholder="enter ur region" required="required" />
+      <form action="/predict"method="POST">
+        <center>
+      <b><label>Age:</label></b>
+    	<input type="text" name="age" placeholder="enter your age" required="required" />
+      <br><br>
+      <b><label>Gender:</label></b>
+      <select name="sex" id="sex">
+        <option value="1">Male</option>
+        <option value="0">Female</option>
+      </select>
+      <br><br>
+      <b><label>BMI:</label></b>
+      <input type="text" name="bmi" placeholder="enter your bmi" required="required" />
+      <br><br>
+      <b><label>Number Of Children:</label></b>
+		  <input type="text" name="children" placeholder="enter your children" required="required" />
+      <br><br>
+      <b><label>Smoking Habit:</label></b>
+		  <select name="smoker" id="smoker">
+        <option value="1">Yes</option>
+        <option value="0">No</option>
+      </select>
+      <br><br>
+      <b><label>Region:</label></b>
+      <select name="region" id="region">
+        <option value="0">Southeast</option>
+        <option value="1">Southwest</option>
+        <option value="2">Northeast</option>
+        <option value="3">Northwest</option>
+
+
+
+        
+      </select>
+      <br><br>
 
 
       <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+      <br><br>
 
-      {{ result ,result1}}
-    </form>
+      <h3>Company1:</h3> {{ result }}
+      <h3>Company2:</h3> {{result1}}
+    </center></form>
 
    <br>
    <br>
-   
-
- </div>
+    </div>
+  </div>
 
 
 </body>
