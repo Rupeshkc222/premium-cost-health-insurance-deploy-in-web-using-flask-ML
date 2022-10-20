@@ -20,3 +20,8 @@ form{
     padding-right: 150px;
 
 }
+button{
+    background-color: beige;
+    cursor: pointer;
+    box-shadow: inset;
+}
