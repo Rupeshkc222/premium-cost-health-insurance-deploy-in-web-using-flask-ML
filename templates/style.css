@@ -25,3 +25,20 @@ button{
     cursor: pointer;
     box-shadow: inset;
 }
+body{
+    background-color:  rgb(254, 254, 240);
+}
+label{
+    font-size: 20px;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+    color: beige;
+    background-color: brown;
+
+}
+a:hover{
+    background-color: beige;
+    color: black;
+}
