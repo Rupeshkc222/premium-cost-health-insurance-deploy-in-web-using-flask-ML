@@ -11,6 +11,10 @@ def Home():
     result1=''
     return render_template("index.html",**locals())
 
+@flask_app.route("/aboutus.html")
+def about():
+    return render_template('aboutus.html')
+
 @flask_app.route("/predict", methods = ["POST","GET"])
 def predict():
     age = float(request.form['age'])
